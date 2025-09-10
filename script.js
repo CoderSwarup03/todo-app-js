@@ -13,7 +13,6 @@ submit.addEventListener('keyup', (e) => {
     }
 })
 
-
 function enter() {
     const input = document.querySelector('#input').value;
     if (input === '') {
@@ -87,7 +86,7 @@ function seachTodoFun() {
             const style = todo.completd ? 'line-through' : 'none';
             todoDiv.innerHTML = `
             <div class="flex items-center justify-between bg-gray-100 px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition">
-                 <p class="${style} font-medium text-gray-800">${todo.input}</p>
+                <p class="${style} font-medium text-gray-800">${todo.input}</p>
                 
                 <div class="flex gap-2">
                     <button 
@@ -95,7 +94,6 @@ function seachTodoFun() {
                             class="bg-red-500 hover:bg-red-600 text-white text-sm px-3 py-1 rounded-md shadow transition">
                             Delete
                     </button>
-
                     <button 
                          onclick="competeTodo(${index})" 
                         class="bg-green-500 hover:bg-green-600 text-white text-sm px-3 py-1 rounded-md shadow transition">
@@ -117,6 +115,5 @@ function seachTodoFun() {
     }
 
 }
-
 
 seachTodo.addEventListener("click", seachTodoFun)
