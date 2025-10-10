@@ -14,7 +14,7 @@ submit.addEventListener('keyup', (e) => {
 })
 
 function enter() {
-    const input = document.querySelector('#input').value;
+    const input = document.querySelector('#input').value.trim();
     if (input === '') {
         alert('Enter the value')
         return;
@@ -60,6 +60,7 @@ function displayTodo() {
         output.appendChild(todoDiv)
     })
 }
+
 
 function deleteTodo(index) {
     todos.splice(index, 1);
